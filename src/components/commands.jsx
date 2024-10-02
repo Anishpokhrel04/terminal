@@ -27,7 +27,7 @@ const commands = {
   contact: () => ({ type: "link", value: "pokhrelanish001@gmail.com" }),
   website: () => ({
     type: "link",
-    value: "https://anishpokhrell.netlify.app",
+    value: "https://anish-portfolio-sooty.vercel.app/",
   }),
   socials: () => ({
     type: "text",
