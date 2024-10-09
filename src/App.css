@@ -1,78 +1,52 @@
 /* index.css */
-
-/* Gradient Animation for Header */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+body {
+  background-color: #1e1e1e; /* Dark background for contrast */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal feel */
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 10s ease infinite;
+.terminal-container {
+  max-width: 800px; /* Max width for terminal */
+  margin: 20px auto; /* Centered horizontally with some top margin */
+  background-color: #2e2e2e; /* Terminal background */
+  border: 1px solid #444444; /* Border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  overflow: hidden; /* Hide overflow for rounded corners */
 }
 
-/* Float Animation for Icons */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.terminal-header {
+  background-color: #007acc; /* Header color */
+  padding: 10px; /* Padding for header */
+  color: white; /* Header text color */
+  font-weight: bold; /* Bold header */
+  text-align: center; /* Centered text */
 }
 
-@keyframes float-reverse {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.terminal-output {
+  min-height: 400px; /* Minimum height for output */
+  padding: 20px; /* Padding for output area */
+  color: #c1c1c1; /* Light gray text */
+  overflow-y: auto; /* Scrollable output */
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+.user-input {
+  display: flex; /* Flex container for input and prompt */
+  padding: 10px; /* Padding around input */
+  background-color: #1e1e1e; /* Input background */
+  border-top: 1px solid #444444; /* Border on top */
 }
 
-.animate-float-reverse {
-  animation: float-reverse 4s ease-in-out infinite;
+.user-prompt {
+  color: #4caf50; /* User prompt color */
+  margin-right: 8px; /* Spacing between prompt and input */
 }
 
-/* Fade-in Animation for Terminal Output */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
-
-/* Typewriter Effect */
-.terminal-output::after {
-  content: '|';
-  animation: blink 1s infinite step-start;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
+input {
+  background: none; /* Transparent background */
+  color: #ffffff; /* White text */
+  border: none; /* No border */
+  outline: none; /* Remove outline */
+  flex: 1; /* Take full width */
+  padding: 5px; /* Padding for input */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for input */
 }
